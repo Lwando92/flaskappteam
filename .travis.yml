@@ -1,15 +1,18 @@
 language: python
-
 python:
-
-  - 3.5
-
+- 3.5
 env:
-  - pipenv
-
+- pipenv
 install:
-  - pipenv install
-
+- pipenv install
 script:
-
- - py.test --cov=tests
+- py.test --cov=tests
+deploy:
+  provider: openshift
+  user: Lwando92
+  password:
+    secure: dFujDWED++R/ujl4cisixUnKRGuGSVQHxAB7zRojBs2/ypNu1jw1YiYgbvKjhkAUfLyTMsLpEsIuUt/VisQiYw8SNe+NcJTPl4Z3l0xTj5GQDGk+dXQ1G/bHuikJU62iM/YIn6QbgerUQg7GLmn8sY1JLWHwSA9nCDlrJ+YJ1b7NWbBgTvTxfGnJELVR6aXSmFzV2FN3DpO2hJTMD+L/fpvHj25WCw7TohdXtqpLckgPx/llLJ1E9EkuFXSwLps4i4bGMw8fQJOSpei+anymu5CL32qhYVfDeMuS040OxNOJ7nxXSX2mPe7wSi1AMAtVn+5cpyO3RqV0/8JV2gDx6VyiaydlKooe0zC4UxpG7Md63ipwmreq23BWqXNSu5bcNyJq8PrCVFsJYuoK0fDyOKlThQHaVlpEkB7VnFQFiHNCdir1LfIkeuUQg2OrPv0Kus2Yg30whPo/94dZIr/7l/+TLO68cCegHcb0iWsfvG/MTZnw/u5Hc52hmOvX7Y7ON4OobUxMD9YPtDa2HwCFwbnh16bXy8Hmiko4XeEaeS+g8ffrNzCSn8NyLv/fdcHT5r75nZiXI07Jh4PP5ixayUlDM28d9pjMRjnegB8o2JS7nUYFmaslt3D/ZyCQ5/wBx8kSkGkob67VmJ8dNeAivAk2umXyxqQ+xozqPb2xs40=
+  app: flaskappteam
+  domain: http://lwando-my-flask-app.7e14.starter-us-west-2.openshiftapps.com
+  on:
+    repo: Lwando92/flaskappteam
