@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, login_required
 from flask_bcrypt import Bcrypt
 import psycopg2
+from flask_heroku import Heroku
 
 
 application = Flask(__name__)
@@ -13,6 +14,7 @@ application.config['SECRET_KEY'] = 'secret'
 application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:lwando123@localhost:5432/my_results'
 application.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 application.config['DEBUG']= True
+heroku = Heroku(application)
 db = SQLAlchemy(application)
 bcrypt = Bcrypt(application)
 login = LoginManager(application)
