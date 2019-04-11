@@ -18,6 +18,8 @@ bcrypt = Bcrypt(application)
 login = LoginManager(application)
 login.login_view = "users.login"
 
+db.create_all()
+
 
 def create_app(config_filename=None):
     app = Flask(__name__, instance_relative_config=True)
