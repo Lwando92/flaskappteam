@@ -8,7 +8,7 @@ from flask_login import login_user, current_user, login_required, logout_user
 import sys
 import logging
 
-
+db.create_all()
 # logging.basicConfig(filename='app.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s',datefmt='%d-%b-%y %H:%M:%S')
 _logger_adding = logging.getLogger('Adding results')
 _logger_getting = logging.getLogger('Get results')
