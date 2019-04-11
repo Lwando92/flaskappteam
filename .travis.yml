@@ -1,12 +1,15 @@
 language: python
+
 python:
-- 3.5
+
+  - 3.5
+
 env:
-- pipenv
+  - pipenv
+
 install:
-- pipenv install
+  - pipenv install
+
 script:
-- py.test --cov=tests
-deploy:
-  api_key:
-    secure: YrGLUHQzZmP3rMkmkF8HnB7kdQhZuBsHQLH2+9zjMJlybTt3hvo0ItJP9D0e+or2c75szqH+CBd4PUtNgvOreC2kqVaOW4ii1oO37SNTgIuxgr12KQ8DomWgIUObgzMS6hi94GeHKyKXfNx0WGq0V68EFRWxCK1IXu2caIiQP9aQeyXxnsPvT+xkayk1bWi4NOUanxov8oM0zP0L3Ej0LXZNJ8igADYXwgmsjTpRJQyuivy1GmEbaf7uClWgu7Trhiee+2R+H0bhzpMVSD1hUn/lOpekquL1r50YNk1DoJoqJfxk1iUpiHSqssez8lHlqRze7K5+v3IbIH5g68WSjcF/izQyx6FDOTlEHAdIphbdX2eqGjdD1FZImJrIYYoaDUTg9M9fkKdDoO4SAAhvkbP5m3Wo7xuAuF+AXYm1q99st4WoVMQEg32kn1x/5p8tDB/VxVeYtoO5Is91DMrQAM/L7zSh7ZcYN8iC96BtgOudIKlViz3gVc2ap/dQMVJ8fGRbv07x74uDHZToKtardPMT5g5Vz9b9OCxh2zcrazD3UnXFVKOQ8lcOHnhYwOgl2BFkSodeW8G8JRMHeRFmUY0Ok+0AbKtmD7ysS5oah8KPA550gVXK9oNr+o+poMz0nlU8nm+LKAkhcNR0WMwbL1lJjZ31/GlQj+xnwX1Pncs=
+
+ - py.test --cov=tests
